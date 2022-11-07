@@ -5,53 +5,135 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="./css/index.css" rel="stylesheet">
     <title>[0 | 1] | Home</title>
 </head>
-<body>
-    <div class="cw-popup">
+<body class="light-theme">
+    <div class="cw-popup" id="home">
         This website was created to fulfill Web Technology
-        module’s requirements and does not represent an actual company or service
+        module’s requirements and does not represent an actual company's or service's website
     </div>
     <header>
         <div class="header">
-            <div>Home</div>
-            <div>Products</div>
-            <div>Team</div>
-            <div>Pricing</div>
-            <div>About Us</div>
-            <div>Contact Us</div>
+            <div><a href="#home" class="underline-left-to-right" style="color: #005905;">Home</a></div>
+            <div><a href="./html/products.html" class="underline-left-to-right">Products</a></div>
+            <div><a href="./html/team.html" class="underline-left-to-right">Team</a></div>
+            <div><a href="./html/pricing.html" class="underline-left-to-right">Pricing</a></div>
+            <div><a href="./html/about.html" class="underline-left-to-right">About Us</a></div>
+            <div><a href="#contacts" class="underline-left-to-right">Contact Us</a></div>
             <div id="theme-switcher"></div>
         </div>
     </header>
     <main>
         <div class="main-title">[0 | 1] Machine Learning Organization</div>
+        <hr style="width: 80vw; margin: 5vh 0; background-color: #069c0e; color: #069c0e;">
         <div class="main-content">
-            <div>Warranty</div>
-            <div>Efficient</div>
-            <div>Flexible</div>
+            <div class="main-content-element">
+                <img src="./img/handshake.png" alt="handshake.png">
+                <div>
+                    <div class="main-content-element-title">Warranty</div>
+                    <div class="main-content-element-content">
+                        Our clients receive our dedicated support and warranty for our products
+                    </div>
+                </div>
+            </div>
+            <div class="main-content-element">
+                <div>
+                    <div class="main-content-element-title">Efficient</div>
+                    <div class="main-content-element-content">
+                        Our service is just for you so you can enjoy effective and
+                        performant artificial intelligence implemented in your company
+                    </div>
+                </div>
+                <img src="./img/superhero.png" alt="superhero.png">
+            </div>
+            <div class="main-content-element">
+                <img src="./img/tools.png" alt="tools.png">
+                <div>
+                    <div class="main-content-element-title">Flexible</div>
+                    <div class="main-content-element-content">
+                        Customizable and dedicated software for your specific needs
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
     <nav>
         <div class="nav-title">What we offer...</div>
         <div class="nav-content">
-            <div>AI solution</div>
-            <div>Predicting models</div>
-            <div>Consultancy</div>
+            <div class="nav-content-element">
+                <img src="./img/brain.png" alt="brain.png">
+                <div>
+                    <div class="nav-content-element-title">
+                            <a href="./html/pricing.html" class="underline-left-to-right">
+                                Artificial Intelligence</a>&nbsp;<span>></span>
+                    </div>
+                    <div class="nav-content-element-content">
+                        AI models implemented in your company
+                    </div>
+                </div>
+            </div>
+            <div class="nav-content-element">
+                <img src="./img/laptop.png" alt="laptop.png">
+                <div>
+                    <div class="nav-content-element-title">
+                        <a href="./html/pricing.html" class="underline-left-to-right">
+                            Dedicated Software</a>&nbsp;<span>></span></div>
+                    <div class="nav-content-element-content">
+                        Desktop/mobile applications for your company or home
+                    </div>
+                </div>
+            </div>
+            <div class="nav-content-element">
+                <img src="./img/consulting.png" alt="consulting.png">
+                <div>
+                    <div class="nav-content-element-title">
+                        <a href="./html/pricing.html" class="underline-left-to-right">
+                            Consultancy</a>&nbsp;<span>></span></div>
+                    <div class="nav-content-element-content">
+                        Consultancy on implementation of IT infrastructure
+                    </div>
+                </div>
+            </div>
         </div>
     </nav>
-    <footer>
+    <hr style="width: 60vw;  margin-bottom: 15vh; background-color: #069c0e; color: #069c0e;">
+    <footer id="contacts">
         <div class="footer">
             <div class="footer-element">
                 <div class="footer-title">Location</div>
-                <div class="footer-content"></div>
+                <div class="footer-content"><a href="https://www.google.com/maps/place/Inha+University+in+Tashkent/@41.3385625,69.3337692,18.17z/data=!4m5!3m4!1s0x38aef48a8ed4d0e9:0x3772abeffc72e7b8!8m2!3d41.338525!4d69.33453"
+                                               style="text-decoration: underline #069c0e">
+                A301, INHA University, Tashkent city, Uzbekistan</a></div>
             </div>
             <div class="footer-element">
                 <div class="footer-title">Contacts</div>
-                <div class="footer-content"></div>
+                <div class="footer-content">
+                    Mobile: <a href="tel:+998933228572" style="text-decoration: underline #069c0e">+998933228572</a>
+                    <br>
+                    Email: <a href="mailto:mlcommunity.uz@gmail.com" style="text-decoration: underline #069c0e">
+                    mlcommunity.uz@gmail.com</a>
+                </div>
             </div>
             <div class="footer-element">
                 <div class="footer-title">Follow Us</div>
-                <div class="footer-content"></div>
+                <div class="footer-content">
+                    <a href="https://github.com/0or1-ML">
+                        <img src="./img/github.png" alt="github.png">
+                    </a>
+                    <a href="https://www.linkedin.com/company/81316541">
+                        <img src="./img/linkedin.png" alt="linkedin.png">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UC3UNR1M_BP3diQMsKLmsQfQ">
+                        <img src="./img/youtube.png" alt="youtube.png">
+                    </a>
+                    <a href="https://www.instagram.com/iut__ml/">
+                        <img src="./img/instagram.png" alt="instagram.png">
+                    </a>
+                    <a href="https://t.me/ml_iut_club">
+                        <img src="./img/telegram.png" alt="telegram.png">
+                    </a>
+                </div>
             </div>
         </div>
     </footer>

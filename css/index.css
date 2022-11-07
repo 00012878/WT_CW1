@@ -1,0 +1,199 @@
+/* Ubuntu, Fredoka One, Carter One fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&family=Fredoka+One&family=Carter+One&display=swap');
+
+* {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+.light-theme {
+    color: black;
+    background-color: #ededed; /* white */
+}
+.dark-theme {
+
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.underline-left-to-right {
+    display: inline-block;
+    position: relative;
+}
+.underline-left-to-right:after {
+    content: " ";
+    background-color: #069c0e; /* green */
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform .2s ease-in-out;
+}
+.underline-left-to-right:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+@keyframes cw-popup-appear {
+    from {height: 0} to {height: 4vh}
+}
+.cw-popup {
+    overflow: hidden;
+    height: 0;
+    background-color: #f2e524; /* yellow */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3vw;
+    font-family: Ubuntu, sans-serif;
+    font-weight: bolder;
+    animation: cw-popup-appear .5s ease-in-out .5s forwards;
+}
+header {
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    margin-bottom: 5vh;
+    backdrop-filter: blur(10px) brightness(70%);
+    box-shadow: #069c0e 0 1vh 3vh;
+}
+.header {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: "Fredoka One", monospace;
+    font-size: 1.5vw;
+    /*border: 1px solid red;*/
+}
+.header div {
+    /*border: 1px solid red;*/
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /*border: 1px solid red;*/
+}
+.main-title {
+    width: 100vw;
+    font-size: 5.2vw;
+    font-family: "Carter One", monospace;
+    text-align: center;
+    /*border: 1px solid green;*/
+}
+
+.main-content-element {
+    width: 80vw;
+    margin-bottom: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    /*border: 1px solid blue;*/
+}
+.main-content-element img {
+    width: 15vw;
+}
+.main-content-element > div {
+    width: 20vw;
+}
+.main-content-element-title {
+    font-family: "Fredoka One", monospace;
+    font-size: 2vw;
+}
+.main-content-element-content {
+    font-family: Ubuntu, sans-serif;
+    font-size: 1.3vw;
+}
+
+nav {
+    margin-top: 20vh;
+    margin-bottom: 10vh;
+    /*border: 1px solid green;*/
+}
+.nav-title {
+    /*border: 1px solid blue;*/
+    font-size: 3.5vw;
+    padding-left: 3vw;
+    margin-bottom: 5vh;
+    font-family: "Fredoka One", monospace;
+}
+.nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.nav-content-element {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 3vh;
+    /*border: 1px solid black;*/
+}
+.nav-content-element:nth-of-type(3) {
+    width: 100vw;
+}
+.nav-content-element img {
+    width: 8vw;
+    margin-bottom: 4vh;
+}
+.nav-content-element-title {
+    font-family: "Fredoka One", monospace;
+    font-size: 2vw;
+    white-space: nowrap;
+    overflow: visible;
+}
+.nav-content-element-title > span {
+    display: inline-block;
+}
+
+.nav-content-element-content {
+    font-family: Ubuntu, sans-serif;
+    font-size: 1.5vw;
+}
+
+footer {
+    height: 20vh;
+    /*border: 2px solid red;*/
+}
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.footer a {
+    transition: color .2s ease-in-out;
+}
+.footer a:hover {
+    color: #005905; /* dark green */
+}
+.footer-element {
+    /*border: 1px solid red;*/
+}
+.footer-title {
+    font-family: "Fredoka One", monospace;
+    font-size: 1.5vw;
+}
+.footer-content {
+    font-family: Ubuntu, sans-serif;
+    font-size: 1.3vw;
+}
+.footer-content img {
+    width: 3vw;
+    margin-right: .5vw;
+}
