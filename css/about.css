@@ -1,0 +1,104 @@
+main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20vh 0;
+}
+.main-title-upper, .main-title, .main-title-lower {
+    width: 100vw;
+    text-align: center;
+    /*border: 1px solid red;*/
+    margin-bottom: 2vh;
+}
+.main-title-upper, .main-title-lower {
+    font-family: Ubuntu, sans-serif;
+    font-size: 1.5vw;
+}
+.main-title {
+    font-family: "Fredoka One", monospace;
+    font-size: 5vw;
+}
+.main-content {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /*border: 1px solid red;*/
+    font-family: Ubuntu, sans-serif;
+    font-size: 1.5vw;
+    margin-top: 7vh;
+}
+.main-content img {
+    width: 30vw;
+}
+.main-content div {
+    width: 50vw;
+    /*border: 1px solid green;*/
+}
+
+.leaders {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 25vh;
+}
+.leaders-title, .leaders-wrapper {
+    width: 100vw;
+}
+.leaders-title {
+    font-family: "Fredoka One", monospace;
+    font-size: 2.5vw;
+    margin-bottom: 5vh;
+}
+.leaders-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.leaders-element {
+    width: 40vw;
+}
+.leaders-element img {
+    box-shadow: 1vw 2vh 2vw #005905;
+    width: 30vw;
+    height: 60vh;
+    border-radius: 1vw 5vw;
+}
+.leaders-element-title {
+    margin-top: 2vh;
+    font-family: "Fredoka One", monospace;
+}
+.leaders-element-content {
+    font-family: Ubuntu, sans-serif;
+}
+.leaders-element-title, .leaders-element-content {
+    font-size: 1.5vw;
+}
+.sponsors {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 10vh;
+}
+.sponsors-title {
+    width: 100vw;
+    font-family: "Fredoka One", monospace;
+    font-size: 2.5vw;
+    margin-bottom: 10vh;
+}
+.sponsors-wrapper {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.sponsors-wrapper img {
+    width: 10vw;
+    height: 20vh;
+}
