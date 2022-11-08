@@ -1,0 +1,87 @@
+header {
+    margin-bottom: 0;
+}
+main {
+    background-image: url("../img/cloud.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    height: 100vh;
+    margin-bottom: 10vh;
+}
+.main-wrapper {
+    height: 100vh;
+    border: 1px solid transparent;
+}
+.main-title {
+    color: #ededed; /* white */
+    margin-top: 10vh;
+    padding: 0 2vw;
+    /*border: 1px solid green;*/
+    font-family: "Fredoka One", monospace;
+    font-size: 2.5vw;
+}
+.main-wrapper button {
+    font-size: 2vw;
+    font-family: Ubuntu, sans-serif;
+    background-color: black;
+    border-radius: 1vw;
+    border-color: #069c0e;
+    color: white;
+    width: 15vw;
+    height: 10vh;
+    margin: 15vh 10vw;
+    transition: all .2s ease-in-out;
+}
+.main-wrapper button:hover {
+    background-color: #0d0d0d; /* black */
+    color: #069c0e;
+    cursor: pointer;
+}
+nav {
+    /*border: 1px solid red;*/
+    margin-bottom: 10vh;
+    min-height: 60vh;
+}
+.nav-title {
+    font-family: "Fredoka One", monospace;
+    font-size: 2.5vw;
+    padding-left: 3vw;
+}
+.nav-content {
+    margin-top: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.list {
+    /*border: 1px solid green;*/
+}
+.list ul {
+    font-family: Ubuntu, sans-serif;
+    font-size: 1.3vw;
+    margin: 0;
+    list-style-type: "- ";
+}
+.list a {
+    /*font-weight: bolder;*/
+    transition: color .2s ease-in-out;
+    text-decoration: underline #005905;
+}
+.list a:hover {
+    color: #005905;
+}
+.tools {
+    /*border: 1px solid green;*/
+}
+.tools-content {
+    margin-bottom: 10vh;
+}
+.tools-content ul {
+    font-family: Ubuntu, sans-serif;
+    list-style-type: none;
+}
+.tools-title {
+    font-family: "Fredoka One", monospace;
+    font-size: 1.3vw;
+}
