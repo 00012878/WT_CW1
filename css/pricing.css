@@ -1,0 +1,142 @@
+header {
+    margin-bottom: 10vh;
+}
+.intro {
+    font-family: Ubuntu, sans-serif;
+    font-size: 1.3vw;
+    text-align: center;
+    margin-bottom: 15vh;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 30vh;
+}
+.main-title {
+    width: 100vw;
+    text-align: center;
+    font-family: "Fredoka One", monospace;
+    font-size: 2.5vw;
+    margin-bottom: 10vh;
+}
+.main-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-content-element {
+    width: 30vw;
+    height: 56vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-content-element-bg {
+    width: 30vw;
+    height: 30vh;
+    background-color: #069c0e;
+    opacity: .8;
+    position: absolute;
+    z-index: -1;
+    transform: skewY(-20deg);
+}
+.second > .main-content-element-bg {
+    transform: skewY(20deg);
+}
+.main-content-element-card {
+    position: absolute;
+    width: 20vw;
+    height: 56vh;
+    border-radius: 1vw 5vw;
+    box-shadow: 1vw 2vh 2vw #0d0d0d;
+    background-color: #f7f7f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.main-content-element-card-title {
+    width: inherit;
+    font-family: "Fredoka One", monospace;
+    font-size: 2vw;
+    text-align: center;
+    text-decoration: #069c0e underline .5vh;
+}
+.main-content-element-card-content {
+    width: inherit;
+}
+.main-content-element-card-content ul {
+    font-family: Ubuntu, sans-serif;
+    font-size: 1.3vw;
+    list-style-type: none;
+    padding: 0 1vw;
+}
+.main-price, .main-price-lower {
+    text-align: center;
+}
+.main-price {
+    font-family: "Fredoka One", monospace;
+    font-size: 2vw;
+}
+.main-price-lower {
+    font-family: Ubuntu, sans-serif;
+    font-size: 1.3vw;
+    font-style: italic;
+}
+.main-content-element-card button, nav button {
+    font-size: 1.5vw;
+    font-family: Ubuntu, sans-serif;
+    background-color: #f7f7f7;
+    border-radius: 1vw;
+    border-color: #069c0e;
+    color: black;
+    width: 10vw;
+    height: 6vh;
+    transition: all .2s ease-in-out;
+}
+.main-content-element-card button:hover, nav button:hover {
+    background-color: #0d0d0d; /* black */
+    color: #069c0e;
+    cursor: pointer;
+}
+.note {
+    color: red;
+    margin-bottom: 5vh;
+    font-size: 1vw;
+    font-style: italic;
+}
+nav {
+    margin-bottom: 10vh;
+}
+nav div {
+    font-family: Ubuntu, sans-serif;
+    font-size: 2vw;
+    padding: 0 5vw;
+    margin-bottom: 5vh;
+}
+nav form {
+    font-family: Ubuntu, sans-serif;
+    font-size: 1.5vw;
+}
+nav form label, nav form input, nav form textarea {
+    margin: 0 10vw;
+}
+nav form input, nav form textarea {
+    font-family: Ubuntu, sans-serif;
+    font-size: 1.2vw;
+    border: .2vw #005905 solid;
+    border-radius: .5vw;
+}
+nav form input {
+    width: 30vw;
+}
+nav button {
+    margin-left: 10vw;
+}
+nav button:nth-of-type(2) {
+    margin-left: 2vw;
+}
