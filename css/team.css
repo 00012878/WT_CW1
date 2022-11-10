@@ -1,0 +1,77 @@
+header {
+    margin-bottom: 10vh;
+}
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 10vh;
+}
+.main-title-upper {
+    text-align: center;
+    font-family: Ubuntu, sans-serif;
+    font-size: 1.5vw;
+    width: 100vw;
+    margin-bottom: 10vh;
+}
+
+.main-content {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.main-content-element {
+    margin-bottom: 5vh;
+}
+.main-content-element img {
+    box-shadow: 1vw 2vh 2vw #005905;
+    width: 30vw;
+    height: 60vh;
+    border-radius: 1vw 5vw;
+}
+.main-content-element-title {
+    margin-top: 2vh;
+    font-family: "Fredoka One", monospace;
+}
+.main-content-element-content {
+    font-family: Ubuntu, sans-serif;
+}
+.main-content-element-title, .main-content-element-content {
+    text-align: center;
+    font-size: 1.5vw;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 10vh;
+}
+.nav-title {
+    font-family: "Fredoka One", monospace;
+    font-size: 2vw;
+    margin-bottom: 3vh;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0 5vw;
+    font-family: Ubuntu, sans-serif;
+    font-size: 1.5vw;
+}
+.nav-content-title {
+    width: 100vw;
+    padding: 0 5vw;
+    font-family: Ubuntu, sans-serif;
+    font-size: 1.5vw;
+}
+.nav-content-title a {
+    text-decoration: #069c0e underline;
+    transition: color .2s ease-in-out;
+}
+.nav-content-title a:hover {
+    color: #005905;
+}
+
