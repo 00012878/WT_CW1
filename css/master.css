@@ -44,26 +44,29 @@ a {
 }
 
 header {
+    width: 100vw;
     z-index: 1;
-    position: sticky;
+    position: fixed; /* not "sticky", since "fixed" prevents bug of "Contact Us" scrolling */
     top: 0;
-    margin-bottom: 5vh;
-    backdrop-filter: blur(10px) brightness(70%);
+    backdrop-filter: none;
     box-shadow: #069c0e 0 1vh 3vh;
+    transition: backdrop-filter .3s ease-in-out;
 }
 .header {
-    height: 10vh;
+    height: 20vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
     font-family: "Fredoka One", monospace;
     font-size: 1.5vw;
-    /*border: 1px solid red;*/
+    transition: height .5s ease-in-out;
 }
 .header div {
     /*border: 1px solid red;*/
 }
-
+.header-top {
+    height: .2vh;
+}
 footer {
     height: 20vh;
     /*border: 2px solid red;*/

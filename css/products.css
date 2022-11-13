@@ -1,17 +1,19 @@
-header {
-    margin-bottom: 0;
-}
 main {
     background-image: url("../img/cloud.png");
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
     height: 100vh;
+    margin-top: 20vh;
     margin-bottom: 10vh;
 }
 .main-wrapper {
     height: 100vh;
     border: 1px solid transparent;
+}
+@keyframes main-title-appear {
+    from {transform: translateY(10vh); opacity: 0}
+    to {transform: translateY(0); opacity: 1}
 }
 .main-title {
     color: #ededed; /* white */
@@ -20,6 +22,9 @@ main {
     /*border: 1px solid green;*/
     font-family: "Fredoka One", monospace;
     font-size: 2.5vw;
+    transform: translateY(10vh);
+    opacity: 0;
+    animation: main-title-appear .5s ease-in-out .3s 1 forwards;
 }
 .main-wrapper button {
     font-size: 2vw;
@@ -54,7 +59,10 @@ nav {
     align-items: center;
     justify-content: space-around;
 }
-.list {
+.list, .tools {
+    transform: translateY(20vh);
+    opacity: 0;
+    transition: all .5s ease-in-out;
     /*border: 1px solid green;*/
 }
 .list ul {
@@ -69,15 +77,14 @@ nav {
     transition: color .2s ease-in-out;
     text-decoration: underline #005905;
 }
-.list a:hover {
-    color: #005905;
-}
-.tools {
-    /*border: 1px solid green;*/
-}
+.list a:hover { color: #005905; }
 .tools-content {
     margin-bottom: 10vh;
+    overflow: hidden;
+    transition: height .5s ease-in-out;
 }
+.open {height: 20vh;}
+.closed {height: 0}
 .tools-content ul {
     font-family: Ubuntu, sans-serif;
     list-style-type: none;
@@ -85,4 +92,10 @@ nav {
 .tools-title {
     font-family: "Fredoka One", monospace;
     font-size: 1.3vw;
+    text-decoration: #005905 underline;
+    transition: color .2s ease-in-out;
+}
+.tools-title:hover {
+    cursor: pointer;
+    color: #005905;
 }

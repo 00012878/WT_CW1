@@ -3,13 +3,20 @@ main {
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin: 20vh 0;
+    margin: 30vh 0 20vh 0;
 }
+@keyframes main-title-appear {
+    from {transform: translateY(20vh); opacity: 0}
+    to {transform: translateY(0); opacity: 1}
+}
+
 .main-title-upper, .main-title, .main-title-lower {
     width: 100vw;
     text-align: center;
     /*border: 1px solid red;*/
     margin-bottom: 2vh;
+    transform: translateY(20vh);
+    opacity: 0;
 }
 .main-title-upper, .main-title-lower {
     font-family: Ubuntu, sans-serif;
@@ -17,10 +24,15 @@ main {
 }
 .main-title-upper {
     text-decoration: underline #069c0e .5vh;
+    animation: main-title-appear .5s ease-in-out .3s 1 forwards;
+}
+.main-title-lower {
+    animation: main-title-appear .5s ease-in-out .9s 1 forwards;
 }
 .main-title {
     font-family: "Fredoka One", monospace;
     font-size: 5vw;
+    animation: main-title-appear .5s ease-in-out .6s 1 forwards;
 }
 .main-content {
     width: 100vw;
@@ -32,11 +44,23 @@ main {
     font-size: 1.5vw;
     margin-top: 7vh;
 }
+@keyframes live-img-mountains {
+    from {transform: translate(0, 0)}
+    to {transform: translate(1vw, -4vh)}
+}
 .main-content img {
     width: 30vw;
+    animation: live-img-mountains 3s ease-in-out infinite alternate;
+}
+@keyframes main-content-div-appear {
+    from {transform: translateY(20vh); opacity: 0}
+    to {transform: translateY(0); opacity: 1}
 }
 .main-content div {
     width: 50vw;
+    transform: translateY(20vh);
+    opacity: 0;
+    animation: main-content-div-appear .5s ease-in-out 1.2s 1 forwards;
     /*border: 1px solid green;*/
 }
 
@@ -62,14 +86,36 @@ main {
     align-items: center;
     justify-content: space-around;
 }
+@keyframes live-img-even {
+    from {transform: translate(-1vw, 2vh)}
+    to {transform: translate(1vw, -2vh)}
+}
+@keyframes live-img-odd {
+    from {transform: translate(-1vw, -2vh)}
+    to {transform: translate(1vw, 2vh)}
+}
 .leaders-element {
-    width: 40vw;
+    margin: 0;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+}
+.leaders-element:nth-child(even) {
+    transform: translate(-1vw, 2vh);
+    animation: live-img-even 3s ease-in-out .6s infinite alternate;
+}
+.leaders-element:nth-child(odd) {
+    transform: translate(-1vw, -2vh);
+    animation: live-img-odd 3s ease-in-out .6s infinite alternate;
 }
 .leaders-element img {
     box-shadow: 1vw 2vh 2vw #005905;
     width: 30vw;
     height: 60vh;
     border-radius: 1vw 5vw;
+    transition: transform .2s ease-in-out;
+}
+.leaders-element img:hover {
+    transform: scale(.9, .9);
 }
 .leaders-element-title {
     margin-top: 2vh;

@@ -1,11 +1,16 @@
-header {
-    margin-bottom: 10vh;
+@keyframes intro-appear {
+    from {transform: translateY(20vh); opacity: 0}
+    to {transform: translateY(0); opacity: 1}
 }
 .intro {
     font-family: Ubuntu, sans-serif;
     font-size: 1.3vw;
     text-align: center;
+    margin-top: 30vh;
     margin-bottom: 15vh;
+    transform: translateY(20vh);
+    opacity: 0;
+    animation: intro-appear .5s ease-in-out .3s 1 forwards;
 }
 
 main {
@@ -47,6 +52,17 @@ main {
 .second > .main-content-element-bg {
     transform: skewY(20deg);
 }
+@keyframes live-card-odd {
+    from {transform: translate(1vw, 4vh)}
+    to {transform: translate(-1vw, -4vh)}
+}
+@keyframes live-card-even {
+    from {transform: translate(1vw, -4vh)}
+    to {transform: translate(-1vw, 4vh)}
+}
+@keyframes card-appear {
+    from {opacity: 0} to {opacity: 1}
+}
 .main-content-element-card {
     position: absolute;
     width: 20vw;
@@ -58,6 +74,18 @@ main {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    opacity: 0;
+}
+/*.first-card {*/
+/*    animation: card-appear .5s ease-in-out .7s 1 forwards;*/
+/*}*/
+.second-card {
+    transform: translate(1vw, -4vh);
+    animation: live-card-even 4s ease-in-out infinite alternate, card-appear .5s ease-in-out .7s 1 forwards;
+}
+.first-card, .third-card {
+    transform: translate(1vw, 4vh);
+    animation: live-card-odd 4s ease-in-out infinite alternate, card-appear .5s ease-in-out .7s 1 forwards;
 }
 .main-content-element-card-title {
     width: inherit;
@@ -118,6 +146,14 @@ nav div {
     padding: 0 5vw;
     margin-bottom: 5vh;
 }
+form div {
+    overflow: hidden;
+    font-family: Ubuntu, sans-serif;
+    font-size: 1.5vw;
+    padding: 0 10vw;
+    color: #069c0e;
+    transition: all .2s ease-in-out;
+}
 nav form {
     font-family: Ubuntu, sans-serif;
     font-size: 1.5vw;
@@ -130,9 +166,20 @@ nav form input, nav form textarea {
     font-size: 1.2vw;
     border: .2vw #005905 solid;
     border-radius: .5vw;
+    transform: translateY(20vh);
+    opacity: 0;
+    transition: height .2s ease-in-out, box-shadow .2s ease-in-out, transform .5s ease-in-out, opacity .5s ease-in-out;
 }
 nav form input {
+    height: 5vh;
     width: 30vw;
+}
+nav form textarea:focus, nav form input:focus {
+    outline: none;
+    box-shadow: .3vw 1vh 1vw #069c0e;
+}
+nav form input:focus {
+    height: 8vh;
 }
 nav button {
     margin-left: 10vw;

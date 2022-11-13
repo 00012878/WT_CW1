@@ -1,17 +1,22 @@
-header {
-    margin-bottom: 15vh;
-}
 main {
+    margin-top: 30vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+}
+@keyframes main-and-table-appear {
+    from {transform: translateY(10vh); opacity: 0}
+    to {transform: translateY(0); opacity: 1}
 }
 .main-title {
     font-family: Ubuntu, sans-serif;
     font-size: 1.5vw;
     padding: 0 5vw;
     margin-bottom: 10vh;
+    transform: translateY(10vh);
+    opacity: 0;
+    animation: main-and-table-appear .8s ease-in-out .2s 1 forwards;
 }
 
 table {
@@ -19,6 +24,9 @@ table {
     width: 90vw;
     border: .2vw solid #069c0e;
     margin-bottom: 10vh;
+    transform: translateY(10vh);
+    opacity: 0;
+    animation: main-and-table-appear .8s ease-in-out .8s 1 forwards;
 }
 table caption {
     font-family: "Fredoka One", monospace;

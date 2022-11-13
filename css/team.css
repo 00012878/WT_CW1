@@ -1,12 +1,14 @@
-header {
-    margin-bottom: 10vh;
-}
 main {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    margin-top: 30vh;
     margin-bottom: 10vh;
+}
+@keyframes main-title-upper-appear {
+    from {transform: translateY(20vh); opacity: 0}
+    to {transform: translateY(0); opacity: 1}
 }
 .main-title-upper {
     text-align: center;
@@ -14,6 +16,9 @@ main {
     font-size: 1.5vw;
     width: 100vw;
     margin-bottom: 10vh;
+    transform: translateY(20vh);
+    opacity: 0;
+    animation: main-title-upper-appear .5s ease-in-out .3s 1 forwards;
 }
 
 .main-content {
@@ -24,13 +29,45 @@ main {
     flex-wrap: wrap;
 }
 .main-content-element {
-    margin-bottom: 5vh;
+    opacity: 0;
+    margin: 0 0 5vh 0;
+}
+@keyframes live-img-appear {
+    from {opacity: 0} to {opacity: 1}
+}
+@keyframes live-img-even {
+    from {transform: translate(-1vw, 2vh)}
+    to {transform: translate(1vw, -2vh)}
+}
+@keyframes live-img-odd {
+    from {transform: translate(1vw, -2vh)}
+    to {transform: translate(-1vw, 2vh)}
+}
+@keyframes live-img-last {
+    from {transform: translate(1vw, -2vh)}
+    to {transform: translate(.8vw, 2vh)}
+}
+.main-content-element:nth-child(even) {
+    transform: translate(-1vw, 2vh);
+    animation: live-img-even 3s ease-in-out infinite alternate, live-img-appear .5s ease-in-out .7s 1 forwards;
+}
+.main-content-element:nth-child(odd) {
+    transform: translate(1vw, -2vh);
+    animation: live-img-odd 3s ease-in-out 1s infinite alternate, live-img-appear .5s ease-in-out .9s 1 forwards;
+}
+.main-content-element:nth-child(7) {
+    transform: translate(1vw, -2vh);
+    animation: live-img-last 3s ease-in-out .4s infinite alternate, live-img-appear .5s ease-in-out .7s 1 forwards;
 }
 .main-content-element img {
     box-shadow: 1vw 2vh 2vw #005905;
     width: 30vw;
     height: 60vh;
     border-radius: 1vw 5vw;
+    transition: transform .2s ease-in-out;
+}
+.main-content-element img:hover {
+    transform: scale(.9, .9);
 }
 .main-content-element-title {
     margin-top: 2vh;
@@ -60,12 +97,18 @@ nav ul {
     padding: 0 5vw;
     font-family: Ubuntu, sans-serif;
     font-size: 1.5vw;
+    transform:  translateY(20vh);
+    opacity: 0;
+    transition: all .5s ease-in-out;
 }
 .nav-content-title {
     width: 100vw;
     padding: 0 5vw;
     font-family: Ubuntu, sans-serif;
     font-size: 1.5vw;
+    transform:  translateY(20vh);
+    opacity: 0;
+    transition: all .5s ease-in-out;
 }
 .nav-content-title a {
     text-decoration: #069c0e underline;
