@@ -76,3 +76,25 @@ tr td:nth-of-type(3) {
     font-style: italic;
     font-weight: bolder;
 }
+
+/* RESPONSIVENESS FOR TABLETS */
+@media (max-width: 810px) {
+    .main-title {font-size: 3vw}
+    table caption {font-size: 4vw;}
+    th {
+        height: 10vh;
+        font-size: 2vw;
+    }
+    td {height: 5vh}
+    tr td:nth-of-type(1) {font-size: 2vw}
+}
+
+/* RESPONSIVENESS FOR MOBILES */
+@media (max-width: 428px) {
+    .main-title {font-size: 4vw}
+    table caption {font-size: 6vw}
+    th {
+        font-size: 3vw;
+    }
+    tr td:nth-of-type(1) {font-size: 3vw}
+}

@@ -109,7 +109,7 @@ nav {
     flex-wrap: wrap;
 }
 .nav-content-element {
-    width: 30vw;
+    width: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -142,4 +142,32 @@ nav {
 .nav-content-element-content {
     font-family: Ubuntu, sans-serif;
     font-size: 1.5vw;
+}
+
+/* RESPONSIVENESS FOR TABLETS */
+@media (max-width: 810px) {
+    .cw-popup {font-size: 1.5vw}
+    .main-content-element-title {font-size: 4vw}
+    .main-content-element-content {font-size: 2.2vw}
+    .main-content-element img {width: 20vw}
+    .nav-title {font-size: 5vw}
+    .nav-content-element img {
+        width: 10vw;
+        margin-bottom: 1vh;
+    }
+    .nav-content-element-title {font-size: 3.5vw}
+    .nav-content-element-content {font-size: 2.5vw}
+}
+
+/* RESPONSIVENESS FOR MOBILES */
+@media (max-width: 428px) {
+    .cw-popup {font-size: 2.5vw}
+    .main-content-element-title {font-size: 5vw}
+    .main-content-element-content {font-size: 3vw}
+    .main-content-element img {width: 30vw}
+    .nav-title {font-size: 7vw}
+    .nav-content-element {margin-bottom: 3vh}
+    .nav-content-element img {width: 20vw}
+    .nav-content-element-title {font-size: 5vw}
+    .nav-content-element-content {font-size: 4vw}
 }

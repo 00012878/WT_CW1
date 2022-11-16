@@ -57,24 +57,23 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    flex-wrap: wrap;
     font-family: "Fredoka One", monospace;
     font-size: 1.5vw;
     transition: height .5s ease-in-out;
 }
-.header div {
-    /*border: 1px solid red;*/
-}
+
 .header-top {
     height: .2vh;
 }
 footer {
     height: 20vh;
-    /*border: 2px solid red;*/
 }
 .footer {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 .footer a {
     transition: color .2s ease-in-out;
@@ -82,9 +81,7 @@ footer {
 .footer a:hover {
     color: #005905; /* dark green */
 }
-.footer-element {
-    /*border: 1px solid red;*/
-}
+
 .footer-title {
     font-family: "Fredoka One", monospace;
     font-size: 1.5vw;
@@ -97,3 +94,22 @@ footer {
     width: 3vw;
     margin-right: .5vw;
 }
+
+/* RESPONSIVENESS FOR TABLETS */
+@media (max-width: 810px) {
+    .header {font-size: 2.5vw}
+    .footer-title {font-size: 2.5vw}
+    .footer-content {font-size: 2vw}
+    .footer-element {margin: 2vh 5vw}
+    .footer-content img {width: 4.5vw}
+}
+
+/* RESPONSIVENESS FOR MOBILES */
+@media (max-width: 428px) {
+    .header {font-size: 5vw; align-items: flex-end; justify-content: space-evenly}
+    .header div {margin-right: 1vw; margin-bottom: 1vh}
+    .footer-title {font-size: 5vw}
+    .footer-content {font-size: 4vw}
+    .footer-content img {width: 10vw}
+}
+

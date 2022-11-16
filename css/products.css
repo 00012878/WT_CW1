@@ -58,6 +58,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 .list, .tools {
     transform: translateY(20vh);
@@ -98,4 +99,34 @@ nav {
 .tools-title:hover {
     cursor: pointer;
     color: #005905;
+}
+
+/* RESPONSIVENESS FOR TABLETS */
+@media (max-width: 810px) {
+    main {background-position: -120vw; margin-bottom: 5vh}
+    .main-title {font-size: 3.5vw}
+    .main-wrapper button {
+        font-size: 3vw;
+        margin: 10vh 5vw;
+        height: 7vh;
+        width: 30vw;
+    }
+    nav {min-height: 40vh}
+    .nav-title {font-size: 4.5vw}
+    .list ul {font-size: 2.5vw}
+    .tools-title {font-size: 2.5vw}
+}
+
+/* RESPONSIVENESS FOR MOBILES */
+@media (max-width: 428px) {
+    main {background-position: -230vw}
+    .main-title {font-size: 5vw}
+    .main-wrapper button {
+        font-size: 4vw;
+        margin: 5vh 5vw;
+    }
+    .nav-title {font-size: 6vw}
+    .list ul {font-size: 4vw}
+    .tools {margin-top: 5vh}
+    .tools-title {font-size: 4vw}
 }
