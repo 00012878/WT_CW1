@@ -1,0 +1,131 @@
+main {
+    background-image: url("../img/cloud.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    height: 100vh;
+    margin-top: 20vh;
+    margin-bottom: 10vh;
+}
+.main-wrapper {
+    height: 100vh;
+    border: 1px solid transparent;
+}
+@keyframes main-title-appear {
+    from {transform: translateY(10vh); opacity: 0}
+    to {transform: translateY(0); opacity: 1}
+}
+.main-title {
+    color: #ededed; /* white */
+    margin-top: 10vh;
+    padding: 0 2vw;
+    /*border: 1px solid green;*/
+    font-family: "Fredoka One", monospace;
+    font-size: 2.5vw;
+    transform: translateY(10vh);
+    opacity: 0;
+    animation: main-title-appear .5s ease-in-out .3s 1 forwards;
+}
+.main-wrapper button {
+    font-size: 2vw;
+    font-family: Ubuntu, sans-serif;
+    background-color: black;
+    border-radius: 1vw;
+    border-color: #069c0e;
+    color: white;
+    width: 15vw;
+    height: 10vh;
+    margin: 15vh 10vw;
+    transition: all .2s ease-in-out;
+}
+.main-wrapper button:hover {
+    background-color: #0d0d0d; /* black */
+    color: #069c0e;
+    cursor: pointer;
+}
+nav {
+    /*border: 1px solid red;*/
+    margin-bottom: 10vh;
+    min-height: 60vh;
+}
+.nav-title {
+    font-family: "Fredoka One", monospace;
+    font-size: 2.5vw;
+    padding-left: 3vw;
+}
+.nav-content {
+    margin-top: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.list, .tools {
+    transform: translateY(20vh);
+    opacity: 0;
+    transition: all .5s ease-in-out;
+    /*border: 1px solid green;*/
+}
+.list ul {
+    font-family: Ubuntu, sans-serif;
+    font-size: 1.3vw;
+    margin: 0;
+    list-style-type: "- ";
+    padding: 0;
+}
+.list a {
+    /*font-weight: bolder;*/
+    text-decoration: underline #005905;
+}
+.list a:hover { color: #005905; transition: color .2s ease-in-out;}
+.tools-content {
+    margin-bottom: 10vh;
+    overflow: hidden;
+    transition: height .5s ease-in-out;
+}
+.open {height: 20vh;}
+.closed {height: 0}
+.tools-content ul {
+    font-family: Ubuntu, sans-serif;
+    list-style-type: none;
+}
+.tools-title {
+    font-family: "Fredoka One", monospace;
+    font-size: 1.3vw;
+    text-decoration: #005905 underline;
+}
+.tools-title:hover {
+    cursor: pointer;
+    color: #005905;
+    transition: color .2s ease-in-out;
+}
+
+/* RESPONSIVENESS FOR TABLETS */
+@media (max-width: 810px) {
+    main {background-position: -120vw; margin-bottom: 5vh}
+    .main-title {font-size: 3.5vw}
+    .main-wrapper button {
+        font-size: 3vw;
+        margin: 10vh 5vw;
+        height: 7vh;
+        width: 30vw;
+    }
+    nav {min-height: 40vh}
+    .nav-title {font-size: 4.5vw}
+    .list ul {font-size: 2.5vw}
+    .tools-title {font-size: 2.5vw}
+}
+
+/* RESPONSIVENESS FOR MOBILES */
+@media (max-width: 428px) {
+    main {background-position: -230vw}
+    .main-title {font-size: 5vw}
+    .main-wrapper button {
+        font-size: 4vw;
+        margin: 5vh 5vw;
+    }
+    .nav-title {font-size: 6vw}
+    .list ul {font-size: 4vw}
+    .tools {margin-top: 5vh}
+    .tools-title {font-size: 4vw}
+}

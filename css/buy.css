@@ -1,0 +1,100 @@
+main {
+    margin-top: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+@keyframes main-and-table-appear {
+    from {transform: translateY(10vh); opacity: 0}
+    to {transform: translateY(0); opacity: 1}
+}
+.main-title {
+    font-family: Ubuntu, sans-serif;
+    font-size: 1.5vw;
+    padding: 0 5vw;
+    margin-bottom: 10vh;
+    transform: translateY(10vh);
+    opacity: 0;
+    animation: main-and-table-appear .8s ease-in-out .2s 1 forwards;
+}
+
+table {
+    border-collapse: collapse;
+    width: 90vw;
+    border: .2vw solid #069c0e;
+    margin-bottom: 10vh;
+    transform: translateY(10vh);
+    opacity: 0;
+    animation: main-and-table-appear .8s ease-in-out .8s 1 forwards;
+}
+table caption {
+    font-family: "Fredoka One", monospace;
+    font-size: 2vw;
+    margin-bottom: 2vh;
+}
+table a {
+    text-decoration: #005905 underline;
+}
+table a:hover {
+    color: #005905;
+    transition: color .2s ease-in-out;
+}
+th {
+    height: 15vh;
+    font-family: "Fredoka One", monospace;
+    font-size: 1.5vw;
+}
+th:nth-of-type(1) {
+    width: 15vw;
+}
+th:nth-of-type(2) {
+    width: 45vw;
+}
+tr {
+    transition: background-color .2s ease-in-out;
+    border-bottom: .1vw dashed #069c0e;
+}
+tr:hover {
+    background-color: #b0e8b3; /* light green */
+}
+tr:nth-of-type(1):hover {
+    background-color: transparent;
+}
+td {
+    height: 10vh;
+    font-family: Ubuntu, sans-serif;
+    text-align: center;
+}
+tr td:nth-of-type(1) {
+    letter-spacing: -.15vw;
+    color: #005905;
+    font-size: 1.5vw;
+    font-weight: bolder;
+}
+tr td:nth-of-type(3) {
+    font-style: italic;
+    font-weight: bolder;
+}
+
+/* RESPONSIVENESS FOR TABLETS */
+@media (max-width: 810px) {
+    .main-title {font-size: 3vw}
+    table caption {font-size: 4vw;}
+    th {
+        height: 10vh;
+        font-size: 2vw;
+    }
+    td {height: 5vh}
+    tr td:nth-of-type(1) {font-size: 2vw}
+}
+
+/* RESPONSIVENESS FOR MOBILES */
+@media (max-width: 428px) {
+    .main-title {font-size: 4vw}
+    table caption {font-size: 6vw}
+    th {
+        font-size: 3vw;
+    }
+    tr td:nth-of-type(1) {font-size: 3vw}
+}

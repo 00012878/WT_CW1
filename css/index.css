@@ -1,0 +1,174 @@
+@keyframes cw-popup-appear {
+    from {height: 0} to {height: 4vh}
+}
+.cw-popup {
+    color: black;
+    width: 100vw;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+    height: 0;
+    background-color: #f2e524; /* yellow */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3vw;
+    font-family: Ubuntu, sans-serif;
+    font-weight: bolder;
+    animation: cw-popup-appear .5s ease-in-out .5s forwards;
+}
+
+main {
+    margin-top: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /*border: 1px solid red;*/
+}
+@keyframes main-title-appear {
+    from {transform: translateY(10vh); opacity: 0}
+    to {transform: translateY(0); opacity: 1}
+}
+.main-title {
+    width: 100vw;
+    font-size: 5.2vw;
+    font-family: "Carter One", monospace;
+    text-align: center;
+    transform: translateY(10vh);
+    opacity: 0;
+    animation: main-title-appear 1s ease-in-out .4s 1 forwards;
+    /*border: 1px solid green;*/
+}
+
+.main-content-element {
+    width: 80vw;
+    margin-bottom: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    /*border: 1px solid blue;*/
+}
+.main-content-element-wrapper {
+    transition: all .5s ease-in-out;
+    opacity: 0;
+}
+.main-content-element:nth-child(odd) .main-content-element-wrapper {
+    transform: translateX(20vw);
+}
+.main-content-element:nth-child(even) .main-content-element-wrapper{
+    transform: translateX(-20vw);
+}
+@keyframes live-img-first {
+    from {transform: translate(0, 0);}
+    to {transform: translate(2vw, -4vh)}
+}
+@keyframes live-img-second {
+    from {transform: translate(0, 0)}
+    to {transform: translate(-1vw, -5vh)}
+}
+@keyframes live-img-third {
+    from {transform: translate(0, 0)}
+    to {transform: translate(2vw, 6vh)}
+}
+.main-content-element img {
+    width: 15vw;
+    transform: translate(0, 0);
+}
+img.first { animation: live-img-first 3s ease-in-out infinite alternate; }
+img.second { animation: live-img-second 2.5s ease-in-out infinite alternate; }
+img.third { animation: live-img-third 2.7s ease-in-out infinite alternate; }
+.main-content-element > div {
+    width: 20vw;
+}
+.main-content-element-title {
+    font-family: "Fredoka One", monospace;
+    font-size: 2vw;
+}
+.main-content-element-content {
+    font-family: Ubuntu, sans-serif;
+    font-size: 1.3vw;
+}
+
+nav {
+    margin-top: 20vh;
+    margin-bottom: 10vh;
+    /*border: 1px solid green;*/
+}
+.nav-title {
+    /*border: 1px solid blue;*/
+    font-size: 3.5vw;
+    padding-left: 3vw;
+    margin-bottom: 5vh;
+    font-family: "Fredoka One", monospace;
+}
+.nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.nav-content-element {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 3vh;
+    transition: all .6s ease-in-out;
+    transform: translateY(20vh);
+    opacity: 0;
+    /*border: 1px solid black;*/
+}
+.nav-content-element:nth-of-type(3) {
+    width: 100vw;
+}
+.nav-content-element img {
+    width: 8vw;
+    margin-bottom: 4vh;
+}
+.nav-content-element-title {
+    font-family: "Fredoka One", monospace;
+    font-size: 2vw;
+    white-space: nowrap;
+    overflow: visible;
+}
+.nav-content-element-title > span {
+    display: inline-block;
+    transition: transform .2s ease-in-out;
+}
+
+.nav-content-element-content {
+    font-family: Ubuntu, sans-serif;
+    font-size: 1.5vw;
+}
+
+/* RESPONSIVENESS FOR TABLETS */
+@media (max-width: 810px) {
+    .cw-popup {font-size: 1.5vw}
+    .main-content-element-title {font-size: 4vw}
+    .main-content-element-content {font-size: 2.2vw}
+    .main-content-element img {width: 20vw}
+    .nav-title {font-size: 5vw}
+    .nav-content-element img {
+        width: 10vw;
+        margin-bottom: 1vh;
+    }
+    .nav-content-element-title {font-size: 3.5vw}
+    .nav-content-element-content {font-size: 2.5vw}
+}
+
+/* RESPONSIVENESS FOR MOBILES */
+@media (max-width: 428px) {
+    .cw-popup {font-size: 2.5vw}
+    .main-content-element-title {font-size: 5vw}
+    .main-content-element-content {font-size: 3vw}
+    .main-content-element img {width: 30vw}
+    .nav-title {font-size: 7vw}
+    .nav-content-element {margin-bottom: 3vh}
+    .nav-content-element img {width: 20vw}
+    .nav-content-element-title {font-size: 5vw}
+    .nav-content-element-content {font-size: 4vw}
+}

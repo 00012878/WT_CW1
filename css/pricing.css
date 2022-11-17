@@ -1,0 +1,265 @@
+@keyframes intro-appear {
+    from {transform: translateY(20vh); opacity: 0}
+    to {transform: translateY(0); opacity: 1}
+}
+.intro {
+    font-family: Ubuntu, sans-serif;
+    font-size: 1.3vw;
+    text-align: center;
+    margin-top: 30vh;
+    margin-bottom: 15vh;
+    transform: translateY(20vh);
+    opacity: 0;
+    animation: intro-appear .5s ease-in-out .3s 1 forwards;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 30vh;
+}
+.main-title {
+    width: 100vw;
+    text-align: center;
+    font-family: "Fredoka One", monospace;
+    font-size: 2.5vw;
+    margin-bottom: 10vh;
+}
+.main-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-content-element {
+    width: 30vw;
+    height: 56vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-content-element-bg {
+    width: 30vw;
+    height: 30vh;
+    background-color: #069c0e;
+    opacity: .8;
+    position: absolute;
+    z-index: -1;
+    transform: skewY(-20deg);
+}
+.second > .main-content-element-bg {
+    transform: skewY(20deg);
+}
+@keyframes live-card-odd {
+    from {transform: translate(1vw, 4vh)}
+    to {transform: translate(-1vw, -4vh)}
+}
+@keyframes live-card-even {
+    from {transform: translate(1vw, -4vh)}
+    to {transform: translate(-1vw, 4vh)}
+}
+@keyframes card-appear {
+    from {opacity: 0} to {opacity: 1}
+}
+.main-content-element-card {
+    color: black;
+    position: absolute;
+    width: 20vw;
+    height: 56vh;
+    border-radius: 1vw 5vw;
+    box-shadow: 1vw 2vh 2vw #0d0d0d;
+    background-color: #f7f7f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    opacity: 0;
+}
+
+.second-card {
+    transform: translate(1vw, -4vh);
+    animation: live-card-even 4s ease-in-out infinite alternate, card-appear .5s ease-in-out .7s 1 forwards;
+}
+.first-card, .third-card {
+    transform: translate(1vw, 4vh);
+    animation: live-card-odd 4s ease-in-out infinite alternate, card-appear .5s ease-in-out .7s 1 forwards;
+}
+.main-content-element-card-title {
+    width: inherit;
+    font-family: "Fredoka One", monospace;
+    font-size: 2vw;
+    text-align: center;
+    text-decoration: #069c0e underline .5vh;
+}
+.main-content-element-card-content {
+    width: inherit;
+}
+.main-content-element-card-content ul {
+    font-family: Ubuntu, sans-serif;
+    font-size: 1.3vw;
+    list-style-type: none;
+    padding: 0 1vw;
+}
+.main-price, .main-price-lower {
+    text-align: center;
+}
+.main-price {
+    font-family: "Fredoka One", monospace;
+    font-size: 2vw;
+}
+.main-price-lower {
+    font-family: Ubuntu, sans-serif;
+    font-size: 1.3vw;
+    font-style: italic;
+}
+.main-content-element-card button, nav button {
+    font-size: 1.5vw;
+    font-family: Ubuntu, sans-serif;
+    background-color: #f7f7f7;
+    border-radius: 1vw;
+    border-color: #069c0e;
+    color: black;
+    width: 10vw;
+    height: 6vh;
+    transition: all .2s ease-in-out;
+}
+.main-content-element-card button:hover, nav button:hover {
+    background-color: #0d0d0d; /* black */
+    color: #069c0e;
+    cursor: pointer;
+}
+.note {
+    color: red;
+    margin-bottom: 5vh;
+    font-size: 1vw;
+    font-style: italic;
+}
+nav {
+    margin-bottom: 10vh;
+}
+nav div {
+    font-family: Ubuntu, sans-serif;
+    font-size: 2vw;
+    padding: 0 5vw;
+    margin-bottom: 5vh;
+}
+form div {
+    overflow: hidden;
+    font-family: Ubuntu, sans-serif;
+    font-size: 1.5vw;
+    padding: 0 10vw;
+    color: #069c0e;
+    transition: all .2s ease-in-out;
+}
+nav form {
+    font-family: Ubuntu, sans-serif;
+    font-size: 1.5vw;
+}
+nav form label, nav form input, nav form textarea {
+    margin: 0 10vw;
+}
+nav form input, nav form textarea {
+    background-color: inherit;
+    color: inherit;
+    font-family: Ubuntu, sans-serif;
+    font-size: 1.2vw;
+    border: .2vw #005905 solid;
+    border-radius: .5vw;
+    transform: translateY(20vh);
+    opacity: 0;
+    transition: height .2s ease-in-out, box-shadow .2s ease-in-out, transform .5s ease-in-out, opacity .5s ease-in-out;
+}
+nav form input {
+    height: 5vh;
+    width: 30vw;
+}
+nav form textarea {width: 80vw}
+nav form textarea:focus, nav form input:focus {
+    outline: none;
+    box-shadow: .3vw 1vh 1vw #069c0e;
+}
+nav form input:focus {
+    height: 8vh;
+}
+nav button {
+    margin-left: 10vw;
+}
+nav button:nth-of-type(2) {
+    margin-left: 2vw;
+}
+
+/* RESPONSIVENESS FOR TABLETS */
+@media (max-width: 810px) {
+    .intro {font-size: 3vw; padding: 0 2vw}
+    main {margin-bottom: 20vh}
+    .main-title {font-size: 5vw}
+    .main-content-element {
+        width: 32vw;
+        height: 30vh;
+    }
+    .main-content-element-bg {width: 32vw; height: 30vh}
+    .main-content-element-card {width: 30vw; height: 30vh}
+    @keyframes live-card-odd {
+        from {transform: translate(1vw, 2vh)}
+        to {transform: translate(-1vw, -2vh)}
+    }
+    @keyframes live-card-even {
+        from {transform: translate(1vw, -2vh)}
+        to {transform: translate(-1vw, 2vh)}
+    }
+    .main-content-element-card-title {font-size: 3vw}
+    .main-content-element-card-content ul {font-size: 2vw}
+    .main-price {font-size: 3vw}
+    .main-price-lower {font-size: 2vw}
+    .main-content-element-card button, nav button {
+        width: 15vw;
+        height: 4vh;
+        font-size: 2vw;
+    }
+    nav div {font-size: 3vw}
+    .note {font-size: 2vw}
+    form div {font-size: 3vw}
+    nav form {font-size: 3vw}
+    nav form input, nav form textarea {font-size: 2vw}
+    nav form input {width: 50vw}
+    nav form textarea {width: 70vw}
+}
+
+/* RESPONSIVENESS FOR MOBILES */
+@media (max-width: 810px) {
+    .intro {font-size: 4vw; padding: 0 2vw}
+    main {margin-bottom: 20vh}
+    .main-title {font-size: 6vw}
+    .main-content-element {
+        width: 32vw;
+        height: 30vh;
+    }
+    .main-content-element-bg {width: 32vw; height: 30vh}
+    .main-content-element-card {width: 30vw; height: 30vh}
+    @keyframes live-card-odd {
+        from {transform: translate(1vw, 2vh)}
+        to {transform: translate(-1vw, -2vh)}
+    }
+    @keyframes live-card-even {
+        from {transform: translate(1vw, -2vh)}
+        to {transform: translate(-1vw, 2vh)}
+    }
+    .main-content-element-card-title {font-size: 5vw}
+    .main-content-element-card-content ul {font-size: 3vw}
+    .main-price {font-size: 4vw}
+    .main-price-lower {font-size: 3vw}
+    .main-content-element-card button, nav button {
+        width: 20vw;
+        height: 4vh;
+        font-size: 4vw;
+    }
+    nav div {font-size: 4vw}
+    .note {font-size: 4vw}
+    form div {font-size: 4vw}
+    nav form {font-size: 4vw}
+    nav form input, nav form textarea {font-size: 3vw}
+    nav form input {width: 50vw}
+    nav form textarea {width: 70vw}
+}

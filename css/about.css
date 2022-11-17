@@ -1,0 +1,191 @@
+main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 30vh 0 20vh 0;
+}
+@keyframes main-title-appear {
+    from {transform: translateY(20vh); opacity: 0}
+    to {transform: translateY(0); opacity: 1}
+}
+
+.main-title-upper, .main-title, .main-title-lower {
+    width: 100vw;
+    text-align: center;
+    /*border: 1px solid red;*/
+    margin-bottom: 2vh;
+    transform: translateY(20vh);
+    opacity: 0;
+}
+.main-title-upper, .main-title-lower {
+    font-family: Ubuntu, sans-serif;
+    font-size: 1.5vw;
+}
+.main-title-upper {
+    text-decoration: underline #069c0e .5vh;
+    animation: main-title-appear .5s ease-in-out .3s 1 forwards;
+}
+.main-title-lower {
+    animation: main-title-appear .5s ease-in-out .9s 1 forwards;
+}
+.main-title {
+    font-family: "Fredoka One", monospace;
+    font-size: 5vw;
+    animation: main-title-appear .5s ease-in-out .6s 1 forwards;
+}
+.main-content {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /*border: 1px solid red;*/
+    font-family: Ubuntu, sans-serif;
+    font-size: 1.5vw;
+    margin-top: 7vh;
+}
+@keyframes live-img-mountains {
+    from {transform: translate(0, 0)}
+    to {transform: translate(1vw, -4vh)}
+}
+.main-content img {
+    width: 30vw;
+    animation: live-img-mountains 3s ease-in-out infinite alternate;
+}
+@keyframes main-content-div-appear {
+    from {transform: translateY(20vh); opacity: 0}
+    to {transform: translateY(0); opacity: 1}
+}
+.main-content div {
+    width: 50vw;
+    transform: translateY(20vh);
+    opacity: 0;
+    animation: main-content-div-appear .5s ease-in-out 1.2s 1 forwards;
+    /*border: 1px solid green;*/
+}
+
+.leaders {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 25vh;
+}
+.leaders-title, .leaders-wrapper {
+    width: 100vw;
+}
+.leaders-title {
+    font-family: "Fredoka One", monospace;
+    font-size: 2.5vw;
+    margin-bottom: 5vh;
+}
+.leaders-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+@keyframes live-img-even {
+    from {transform: translate(-1vw, 2vh)}
+    to {transform: translate(1vw, -2vh)}
+}
+@keyframes live-img-odd {
+    from {transform: translate(-1vw, -2vh)}
+    to {transform: translate(1vw, 2vh)}
+}
+.leaders-element {
+    margin: 0;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+}
+.leaders-element:nth-child(even) {
+    transform: translate(-1vw, 2vh);
+    animation: live-img-even 3s ease-in-out .6s infinite alternate;
+}
+.leaders-element:nth-child(odd) {
+    transform: translate(-1vw, -2vh);
+    animation: live-img-odd 3s ease-in-out .6s infinite alternate;
+}
+.leaders-element img {
+    box-shadow: 1vw 2vh 2vw #005905;
+    width: 30vw;
+    height: 60vh;
+    border-radius: 1vw 5vw;
+    transition: transform .2s ease-in-out;
+}
+.leaders-element img:hover {
+    transform: scale(.9, .9);
+}
+.leaders-element-title {
+    margin-top: 2vh;
+    font-family: "Fredoka One", monospace;
+}
+.leaders-element-content {
+    font-family: Ubuntu, sans-serif;
+}
+.leaders-element-title, .leaders-element-content {
+    font-size: 1.5vw;
+}
+.sponsors {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 10vh;
+}
+.sponsors-title {
+    width: 100vw;
+    font-family: "Fredoka One", monospace;
+    font-size: 2.5vw;
+    margin-bottom: 10vh;
+}
+.sponsors-wrapper {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.sponsors-wrapper img {
+    width: 10vw;
+    height: 20vh;
+}
+
+/* RESPONSIVENESS FOR TABLETS */
+@media (max-width: 1200px) and (max-height: 810px) {
+    .leaders-element img {
+        width: 30vw;
+        height: 40vh;
+    }
+    .sponsors-wrapper img {width: 15vw; height: 15vh}
+}
+@media (max-width: 1000px) {
+    .leaders-element img {
+        width: 40vw;
+        height: 30vh;
+    }
+}
+@media (max-width: 810px) {
+    .main-title-upper, .main-title-lower {font-size: 2.5vw}
+    .main-title {font-size: 6vw}
+    .main-content {font-size: 2.5vw}
+    .leaders-title {font-size: 5vw}
+    .leaders-element img {width: 35vw; height: 27vh}
+    .leaders-element-title, .leaders-element-content {font-size: 2vw}
+    .sponsors-title {font-size: 4vw}
+    .sponsors-wrapper img {width: 20vw; height: 15vh}
+}
+
+/* RESPONSIVENESS FOR MOBILES */
+@media (max-width: 428px) {
+    .main-title-upper, .main-title-lower {font-size: 4vw}
+    .main-title {font-size: 10vw}
+    .main-content {font-size: 4vw}
+    .leaders-title {font-size: 8vw}
+    .leaders-element {margin-bottom: 5vh}
+    .leaders-element img {width: 60vw; height: 27vh}
+    .leaders-element-title, .leaders-element-content {font-size: 4vw}
+    .sponsors-title {font-size: 8vw}
+    .sponsors-wrapper img {width: 20vw; height: 10vh}
+}

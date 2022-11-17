@@ -1,0 +1,178 @@
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30vh;
+    margin-bottom: 10vh;
+}
+@keyframes main-title-upper-appear {
+    from {transform: translateY(20vh); opacity: 0}
+    to {transform: translateY(0); opacity: 1}
+}
+.main-title-upper {
+    text-align: center;
+    font-family: Ubuntu, sans-serif;
+    font-size: 1.5vw;
+    width: 100vw;
+    margin-bottom: 10vh;
+    transform: translateY(20vh);
+    opacity: 0;
+    animation: main-title-upper-appear .5s ease-in-out .3s 1 forwards;
+}
+
+.main-content {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.main-content-element {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 30vw;
+    align-items: center;
+    justify-content: center;
+    width: 30vw;
+    opacity: 0;
+    margin: 0 0 5vh 0;
+}
+@keyframes live-img-appear {
+    from {opacity: 0} to {opacity: 1}
+}
+@keyframes live-img-even {
+    from {transform: translate(-1vw, 2vh)}
+    to {transform: translate(1vw, -2vh)}
+}
+@keyframes live-img-odd {
+    from {transform: translate(1vw, -2vh)}
+    to {transform: translate(-1vw, 2vh)}
+}
+@keyframes live-img-last {
+    from {transform: translate(1vw, -2vh)}
+    to {transform: translate(.8vw, 2vh)}
+}
+.main-content-element:nth-child(even) {
+    transform: translate(-1vw, 2vh);
+    animation: live-img-even 3s ease-in-out infinite alternate, live-img-appear .5s ease-in-out .7s 1 forwards;
+}
+.main-content-element:nth-child(odd) {
+    transform: translate(1vw, -2vh);
+    animation: live-img-odd 3s ease-in-out 1s infinite alternate, live-img-appear .5s ease-in-out .9s 1 forwards;
+}
+.main-content-element:nth-child(7) {
+    transform: translate(1vw, -2vh);
+    animation: live-img-last 3s ease-in-out .4s infinite alternate, live-img-appear .5s ease-in-out .7s 1 forwards;
+}
+.main-content-element img {
+    box-shadow: 1vw 2vh 2vw #005905;
+    width: 30vw;
+    height: 60vh;
+    border-radius: 1vw 5vw;
+    transition: transform .2s ease-in-out;
+}
+.main-content-element img:hover {
+    transform: scale(.9, .9);
+}
+.main-content-element-title {
+    width: inherit;
+    margin-top: 2vh;
+    font-family: "Fredoka One", monospace;
+}
+.main-content-element-content {
+    width: inherit;
+    font-family: Ubuntu, sans-serif;
+}
+.main-content-element-title, .main-content-element-content {
+    text-align: center;
+    font-size: 1.5vw;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 10vh;
+}
+.nav-title {
+    font-family: "Fredoka One", monospace;
+    font-size: 2vw;
+    margin-bottom: 3vh;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0 5vw;
+    font-family: Ubuntu, sans-serif;
+    font-size: 1.5vw;
+    transform:  translateY(20vh);
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+.nav-content-title {
+    width: 100vw;
+    padding: 0 5vw;
+    font-family: Ubuntu, sans-serif;
+    font-size: 1.5vw;
+    transform:  translateY(20vh);
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+.nav-content-title a {
+    text-decoration: #069c0e underline;
+}
+.nav-content-title a:hover {
+    color: #005905;
+    transition: color .2s ease-in-out;
+}
+
+/* RESPONSIVENESS FOR TABLETS */
+@media (max-width: 1200px) and (max-height: 810px) {
+    .main-content-element img {
+        width: 40vw;
+        height: 40vh;
+    }
+}
+@media (max-width: 1000px) {
+    .main-content-element {flex-basis: 30vw; width: 30vw}
+    .main-content-element img {
+        width: 40vw;
+        height: 30vh;
+    }
+}
+@media (max-width: 810px) {
+    .main-title-upper {font-size: 3vw; padding: 0 2vw}
+    .main-content-element {flex-basis: 40vw; width: 40vw}
+    .main-content-element img {
+        width: 32vw;
+        height: 23vh;
+    }
+    .main-content-element-title, .main-content-element-content {
+        font-size: 2.5vw;
+    }
+    .nav-title {font-size: 4.5vw}
+    nav ul {font-size: 2.5vw}
+    .nav-content-title {font-size: 3vw}
+}
+
+
+/* RESPONSIVENESS FOR MOBILES */
+@media (max-width: 950px) and (max-height: 450px) {
+    .main-content-element img {
+        width: 20vw;
+        height: 40vh;
+    }
+}
+@media (max-width: 428px) {
+    .main-title-upper {font-size: 4.5vw; padding: 0 5vw}
+    .main-content-element img {
+        width: 40vw;
+        height: 20vh;
+    }
+    .main-content-element-title, .main-content-element-content {
+        font-size: 4.5vw;
+    }
+    .nav-title {font-size: 6vw}
+    nav ul {font-size: 4vw}
+    .nav-content-title {font-size: 5vw}
+}
