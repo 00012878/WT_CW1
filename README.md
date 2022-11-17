@@ -14,6 +14,7 @@ Website:
 Created by 00012878.
 
 ## Reference
+Note: The profile images of people indicated on the website is not with the accordance of the real members of the organization. This is done to keep actual members personality confidential.
 The following is the reference for the external images used in the website.
 1. https://fonts.google.com/
 2. https://www.pngrepo.com
