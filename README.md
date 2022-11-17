@@ -9,11 +9,12 @@ The organization provides ai solutions (models, software) for companies.
 HQ is located in INHA university.
 <br><br><br>
 Website: 
-<br>Repository:
+<br>Repository: https://github.com/00012878/WT_CW1
 <br><br>
 Created by 00012878.
 
 ## Reference
+The following is the reference for the external images used in the website.
 1. https://fonts.google.com/
 2. https://www.pngrepo.com
 3. https://ninewheels.tumblr.com/
