@@ -35,10 +35,10 @@ table caption {
 }
 table a {
     text-decoration: #005905 underline;
-    transition: color .2s ease-in-out;
 }
 table a:hover {
     color: #005905;
+    transition: color .2s ease-in-out;
 }
 th {
     height: 15vh;

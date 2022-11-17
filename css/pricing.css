@@ -64,6 +64,7 @@ main {
     from {opacity: 0} to {opacity: 1}
 }
 .main-content-element-card {
+    color: black;
     position: absolute;
     width: 20vw;
     height: 56vh;
@@ -76,9 +77,7 @@ main {
     flex-wrap: wrap;
     opacity: 0;
 }
-/*.first-card {*/
-/*    animation: card-appear .5s ease-in-out .7s 1 forwards;*/
-/*}*/
+
 .second-card {
     transform: translate(1vw, -4vh);
     animation: live-card-even 4s ease-in-out infinite alternate, card-appear .5s ease-in-out .7s 1 forwards;
@@ -162,6 +161,8 @@ nav form label, nav form input, nav form textarea {
     margin: 0 10vw;
 }
 nav form input, nav form textarea {
+    background-color: inherit;
+    color: inherit;
     font-family: Ubuntu, sans-serif;
     font-size: 1.2vw;
     border: .2vw #005905 solid;

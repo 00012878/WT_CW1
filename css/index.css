@@ -2,6 +2,7 @@
     from {height: 0} to {height: 4vh}
 }
 .cw-popup {
+    color: black;
     width: 100vw;
     overflow: hidden;
     position: absolute;

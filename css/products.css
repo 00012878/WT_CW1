@@ -75,10 +75,9 @@ nav {
 }
 .list a {
     /*font-weight: bolder;*/
-    transition: color .2s ease-in-out;
     text-decoration: underline #005905;
 }
-.list a:hover { color: #005905; }
+.list a:hover { color: #005905; transition: color .2s ease-in-out;}
 .tools-content {
     margin-bottom: 10vh;
     overflow: hidden;
@@ -94,11 +93,11 @@ nav {
     font-family: "Fredoka One", monospace;
     font-size: 1.3vw;
     text-decoration: #005905 underline;
-    transition: color .2s ease-in-out;
 }
 .tools-title:hover {
     cursor: pointer;
     color: #005905;
+    transition: color .2s ease-in-out;
 }
 
 /* RESPONSIVENESS FOR TABLETS */

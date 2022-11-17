@@ -120,10 +120,10 @@ nav ul {
 }
 .nav-content-title a {
     text-decoration: #069c0e underline;
-    transition: color .2s ease-in-out;
 }
 .nav-content-title a:hover {
     color: #005905;
+    transition: color .2s ease-in-out;
 }
 
 /* RESPONSIVENESS FOR TABLETS */
