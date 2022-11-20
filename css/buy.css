@@ -35,10 +35,10 @@ table caption {
 }
 table a {
     text-decoration: #005905 underline;
+    transition: color .2s ease-in-out;
 }
 table a:hover {
     color: #005905;
-    transition: color .2s ease-in-out;
 }
 th {
     height: 15vh;
@@ -56,7 +56,7 @@ tr {
     border-bottom: .1vw dashed #069c0e;
 }
 tr:hover {
-    background-color: #b0e8b3; /* light green */
+    background-color: #65a166; /* light green */
 }
 tr:nth-of-type(1):hover {
     background-color: transparent;

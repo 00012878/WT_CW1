@@ -34,7 +34,11 @@ function animateY(element) {
     element.style.opacity = "1"
 }
 
-// Theme switching logic.
+// THEME SWITCHING LOGIC.
+const timing = {
+    duration: 500,
+    animationTimingFunction: "ease-in-out"
+}
 try {
     // Checking if theme value is stored in the local storage.
     if (window.localStorage.getItem("theme") === "dark") {
@@ -59,12 +63,22 @@ themeSwitcher.addEventListener("click", () => {
         themeSwitcher.textContent = "Light Mode"
         themeSwitcher.style.backgroundColor = "#e6e6e6"
         themeSwitcher.style.color = "black"
+        // smooth animation play.
+        document.body.animate([
+            {color: "black", backgroundColor: "#ededed"},
+            {color: "white", backgroundColor: "#141414"}
+        ], timing)
         window.localStorage.setItem("theme", "dark")
     } else if (document.body.className === "dark-theme") {
         document.body.classList.replace("dark-theme", "light-theme")
         themeSwitcher.textContent = "Dark Mode"
         themeSwitcher.style.backgroundColor = "#242424"
         themeSwitcher.style.color = "#ebebeb"
+        // smooth animation play.
+        document.body.animate([
+            {color: "white", backgroundColor: "#141414"},
+            {color: "black", backgroundColor: "#ededed"}
+        ], timing)
         window.localStorage.setItem("theme", "light")
     }
 })
