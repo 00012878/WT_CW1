@@ -8,7 +8,7 @@ The organization provides ai solutions (models, software) for companies.
 <br>
 HQ is located in INHA university.
 <br><br><br>
-Website: https://00012878.github.io/WT_CW1/ 
+Website: https://00012878.github.io/WT_CW1/
 <br>Repository: https://github.com/00012878/WT_CW1
 <br><br>
 Created by 00012878.
